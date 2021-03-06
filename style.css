@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: rgb(236, 236, 236);
+}
+
+body,
+.form ::placeholder,
+input,
+.button-tertiary {
+  font-family: "Fira Sans", sans-serif;
+}
+
+body {
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc((1.1rem + 1.5vmin) * 0.7);
+  line-height: calc(((1.1rem + 1.5vmin) * 1.4) * 0.7);
+  color: white;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+}
+
+section {
+  max-width: calc(calc((1.1rem + 1.5vmin) * 1.4) * 14);
+  margin: calc(calc((1.1rem + 1.5vmin) * 1.4) * 2) auto;
+  padding: 1.5rem;
+  background: #0045e6;
+  background: linear-gradient(260deg, #0045e6, rgba(3, 3, 3, 0) 100%),
+    linear-gradient(140deg, #00d5ff, rgba(3, 3, 3, 0) 100%), linear-gradient(380deg, #0e0ef4, rgba(3, 3, 3, 0) 100%);
+  border-radius: 0.4rem;
+}
+
+h1 {
+  padding: 0 0 2rem 0;
+  text-align: center;
+}
+
+.button-tertiary {
+  display: inline-block;
+  padding: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2) calc(1.5vmin * 2);
+  cursor: pointer;
+  border: solid calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.14);
+  border-radius: calc(1.5vmin * 100);
+  color: white;
+  font-weight: 800;
+  font-style: normal;
+  font-size: calc((1.1rem + 1.5vmin) * 0.7);
+  line-height: calc(((1.1rem + 1.5vmin) * 1.4) * 0.7);
+  letter-spacing: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.02);
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out, background 0.1s ease-in-out, border 0.1s ease-in-out;
+}
+
+.button-tertiary {
+  background: linear-gradient(0deg, #e7fafe, white);
+  border-color: #6ee0f7;
+  color: #008099;
+}
+.button-tertiary:hover:not(.button-disabled),
+.button-tertiary:focus:not(.button-disabled) {
+  background: white;
+  border-color: #0e0ef4;
+  color: #0e0ef4;
+}
+.button-tertiary:active:not(.button-disabled),
+.button-tertiary.selected:not(.button-disabled) {
+  background: white;
+  border-color: aqua;
+  color: #2969ff;
+  font-style: italic;
+}
+
+.button-disabled {
+  filter: grayscale(100%) contrast(35%) brightness(150%);
+}
+
+::selection {
+  background: #ffc499;
+}
+
+input:focus {
+  outline: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.1) dashed white;
+}
+
+.form .honeypot {
+  position: absolute;
+  left: -9999px;
+}
+
+.form label {
+  font-weight: 700;
+  font-style: normal;
+  font-size: calc((1.1rem + 1.5vmin) * 0.6);
+  line-height: calc(((1.1rem + 1.5vmin) * 1.4) * 0.6);
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.1) 0 calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.4) 0;
+  padding: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.4) calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2)
+    calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2) calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2);
+  border: none;
+  border-bottom: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2) solid #f0f4ff;
+  border-radius: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2);
+  background: #f0f4ff;
+  color: #002270;
+}
+
+.form .valid,
+.form .invalid {
+  outline: none;
+}
+
+.form .valid {
+  border-bottom-color: #b3c9ff;
+}
+
+.form .invalid {
+  border-bottom-color: #cc4400;
+}
+
+.form ::placeholder {
+  color: #3b73f7;
+}
+
+.form .error-info {
+  margin: calc(calc((1.1rem + 1.5vmin) * 1.4) * -0.2) 0 calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.4) 0;
+  padding: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2);
+  border-radius: calc(calc((1.1rem + 1.5vmin) * 1.4) * 0.2);
+  background: #f0f4ff;
+  color: #cc4400;
+  font-weight: 700;
+  font-style: normal;
+  font-size: calc((1.1rem + 1.5vmin) * 0.5);
+  line-height: calc(((1.1rem + 1.5vmin) * 1.4) * 0.5);
+}
+
+.form .noerror {
+  display: none;
+}
+
+.form .error {
+  display: block;
+}
+
+.form .button-submit {
+  display: block;
+  margin: 0.5rem auto;
+}
